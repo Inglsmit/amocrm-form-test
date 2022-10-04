@@ -1,12 +1,147 @@
-@use '../helpers' as h;
+@use '../helpers'as h;
 
 html {
-  font-size: 100%;
+	font-size: 100%;
 }
 
 body {
-  font-family: h.$font-family;
-  font-weight: 500;
-  font-size: h.rem(16);
-  color: h.$primary-color;
+	font-family: h.$font-family;
+	font-weight: 500;
+	font-size  : h.rem(16);
+	color      : h.$primary-color;
+}
+
+.l-main {
+	height         : 100vh;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+}
+
+.popup__wrapper {
+	position        : absolute;
+	top             : 50%;
+	left            : 50%;
+	background-color: #fff;
+
+	transform: translate(-50%, -50%);
+
+	&.hidden {
+		display: none;
+	}
+
+	&-inner {
+		border       : 1px solid #ccc;
+		border-radius: 15px;
+		padding      : 50px;
+		position     : relative;
+		min-width    : 900px;
+
+		@media (max-width: 900px) {
+			min-width: unset;
+		}
+	}
+}
+
+.header {
+	font-size    : 35px;
+	margin-bottom: 35px;
+	font-weight  : bold;
+
+	@media (max-width: 900px) {
+		display: none;
+	}
+
+	&--mob {
+		display: none;
+
+		@media (max-width: 900px) {
+			font-size : 20px;
+			display   : block;
+			text-align: center;
+		}
+	}
+
+}
+
+.grid {
+
+	&-row {
+		display: flex;
+	}
+
+	&-col-left {
+		width: 56%;
+	}
+
+	&-col-right {
+		width: 44%;
+	}
+
+	@media (max-width: 900px) {
+		&-row {
+			flex-direction: column;
+		}
+
+		&-col-left {
+			width: 100%;
+		}
+
+		&-col-right {
+			width: 100%;
+		}
+	}
+}
+
+.input-wrapper {
+	label {
+		font-size  : 15px;
+		font-weight: 300;
+	}
+
+	input {
+		margin-top   : 10px;
+		border       : 1px solid #ccc;
+		border-radius: 5px;
+		height       : 50px;
+		padding-left : 18px;
+		width        : 100%;
+		font-size    : 20px;
+
+		&::placeholder {
+			color      : #808080;
+			font-weight: 300;
+		}
+	}
+
+	&:nth-child(1) {
+		margin-bottom: 30px;
+	}
+
+	&:nth-child(2) {
+		margin-bottom: 18px;
+	}
+}
+
+.pic-desc {
+	margin-bottom: -52px;
+	margin-left  : -20px;
+
+	@media (max-width: 900px) {
+		margin-left  : 0;
+		margin-bottom: 25px;
+	}
+
+	@media (max-width: 900px) {
+		display: none;
+	}
+
+	&--mob {
+		display: none;
+
+		@media (max-width: 900px) {
+			display: inline-block;
+			width  : 100%;
+		}
+	}
 }

@@ -1,1 +1,53 @@
 main.l-main
+	div.button-wrapper
+		button.cta-button
+			.
+				Клик!
+
+	div.popup__wrapper.hidden
+		.popup__wrapper-inner
+			span.close
+			div.grid-row
+				.grid-col-left
+					h2.header
+						.
+							Получите набор файлов для руководителя:
+
+				.grid-col-right
+			div.grid-row
+				.grid-col-left
+					img.pic-desc(src="img/forma-pic.png", alt="")
+					img.pic-desc.pic-desc--mob(src="img/forma-pic-mobile.jpg", alt="")
+					h2.header.header--mob
+						.
+							Получите набор файлов для руководителя:
+
+				.grid-col-right
+					form.contact-form(action="#")
+						.input-wrapper
+							label(for="email")
+								.
+									Введите Email для получения файлов:
+							br
+							input(type="text" id="email" name="email" placeholder="E-mail")
+						.input-wrapper
+							label(for="phone")
+								.
+									Введите телефон для подтверждения доступа:
+							br
+							input(type="text" id="phone" name="phone" placeholder="+7 (000) 000-00-00")
+						button.cta-download(type="submit")
+							.
+								Скачать файлы
+						.fl-description
+							span
+								.
+									PDF 4,7 MB
+							span
+								.
+									DOC 0,8 MB
+							span
+								.
+									XLS 1,2 MB
+
+						span.message

@@ -1,0 +1,83 @@
+.button-wrapper {
+	display        : flex;
+	justify-content: center;
+}
+
+.cta-button {
+	text-align   : center;
+	font-family  : "Roboto", sans-serif;
+	font-size    : 15px;
+	outline      : 0;
+	border       : 0;
+	padding      : 15px;
+	width        : 235px;
+	height       : 70px;
+	background   : #ff0000;
+	color        : #FAFAFA;
+	border-radius: 5px;
+	box-shadow   : rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	cursor       : pointer;
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.cta-download {
+	height       : 72px;
+	width        : 100%;
+	background   : linear-gradient(180deg, rgba(56, 216, 114, 1) 0%, rgba(59, 198, 110, 1) 70%);
+	text-align   : center;
+	border-radius: 5px;
+	font-size    : 25px;
+	color        : #fff;
+	font-weight  : 400;
+
+	box-shadow:
+		rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.fl-description {
+	display        : flex;
+	justify-content: center;
+	column-gap     : 20px;
+	font-size      : 12px;
+	font-weight    : 300;
+	color          : #808080;
+	margin-top     : 12px;
+}
+
+.close {
+	position: absolute;
+	right   : 20px;
+	top     : 20px;
+	width   : 16px;
+	height  : 16px;
+	cursor  : pointer;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:before,
+	&:after {
+		content         : ' ';
+		position        : absolute;
+		left            : 8px;
+		height          : 16px;
+		width           : 2px;
+		background-color: #f02424;
+	}
+
+	&:before {
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
