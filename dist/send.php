@@ -54,7 +54,7 @@ $headers = [
 
   if(!empty($email) && !empty($phone)){
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $receiver = "Djaild@yandex.ru";
+      $receiver = "order@salesgenerator.pro";
       $subject = "Заявка $name";
       $body = "Имя: $name\nEmail: $email\Телефон: $phone\n\nСообщение:\n$message\n\nС уважением,\n$name";
       $sender = "From: $email";
